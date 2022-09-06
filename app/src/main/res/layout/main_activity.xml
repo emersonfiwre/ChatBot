@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context=".view.activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_green"
+        android:padding="@dimen/chatbot_dimen_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/id_card_computer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/chatbot_dimen_16dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="@dimen/chatbot_dimen_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/chatbot_dimen_10dp"
+                app:srcCompat="@drawable/chatbot_ic_bot"
+                app:tint="@color/darkness_green" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/chatbot_dimen_16dp"
+            android:text="@string/chatbot_sapimrobot"
+            android:textColor="@color/white"
+            android:textSize="@dimen/chatbot_dimen_16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/id_card_computer"
+            app:layout_constraintStart_toEndOf="@id/id_card_computer"
+            app:layout_constraintTop_toTopOf="@id/id_card_computer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_recycler_chat"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chatbot_dimen_0dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_send_ask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_toolbar"
+        tools:listitem="@layout/chatbot_person_holder" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/id_edit_message"
+        android:layout_width="@dimen/chatbot_dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/chatbot_dimen_12dp"
+        android:layout_marginEnd="@dimen/chatbot_dimen_8dp"
+        android:layout_marginBottom="@dimen/chatbot_dimen_12dp"
+        android:background="@drawable/chatbot_shape_round"
+        android:elevation="@dimen/chatbot_dimen_2dp"
+        android:hint="@string/chatbot_write_message"
+        android:imeOptions="actionSend"
+        android:inputType="textMultiLine|textCapSentences"
+        android:padding="@dimen/chatbot_dimen_12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="@dimen/chatbot_dimen_14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/id_btn_send_ask"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/id_btn_send_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/chatbot_dimen_8dp"
+        android:backgroundTint="@color/dark_green"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/id_edit_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/id_edit_message"
+        app:srcCompat="@drawable/chatbot_ic_send"
+        app:tint="@android:color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

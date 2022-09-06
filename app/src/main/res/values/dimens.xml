@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="chatbot_dimen_30dp">30dp</dimen>
+    <dimen name="chatbot_dimen_8dp">8dp</dimen>
+    <dimen name="chatbot_dimen_2dp">2dp</dimen>
+    <dimen name="chatbot_dimen_12dp">12dp</dimen>
+    <dimen name="chatbot_dimen_3dp">3dp</dimen>
+    <dimen name="chatbot_dimen_0dp">0dp</dimen>
+    <dimen name="chatbot_dimen_5dp">5dp</dimen>
+    <dimen name="chatbot_dimen_32dp">32dp</dimen>
+    <dimen name="chatbot_dimen_16sp">16sp</dimen>
+    <dimen name="chatbot_dimen_14sp">14sp</dimen>
+    <dimen name="chatbot_dimen_10dp">10dp</dimen>
+    <dimen name="chatbot_dimen_16dp">16dp</dimen>
+    <dimen name="chatbot_dimen_12sp">12sp</dimen>
+</resources>

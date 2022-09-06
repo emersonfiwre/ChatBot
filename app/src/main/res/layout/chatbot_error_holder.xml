@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/chatbot_dimen_8dp"
+    app:cardCornerRadius="@dimen/chatbot_dimen_8dp"
+    app:cardElevation="@dimen/chatbot_dimen_12dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="@dimen/chatbot_dimen_8dp"
+        app:cardElevation="@dimen/chatbot_dimen_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/chatbot_dimen_32dp"
+                android:layout_height="@dimen/chatbot_dimen_32dp"
+                android:layout_margin="@dimen/chatbot_dimen_8dp"
+                app:srcCompat="@drawable/chatbot_ic_bot"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/id_txt_robot_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/chatbot_dimen_5dp"
+                android:gravity="left"
+                android:padding="@dimen/chatbot_dimen_3dp"
+                android:text="@string/chatbot_error"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chatbot_dimen_16sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
